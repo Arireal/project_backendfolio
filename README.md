@@ -25,6 +25,6 @@ I am a backend developer with experience in Python, Django, and various other pr
 ## Contact
 Feel free to reach out to me for collaboration or inquiries:
 - Email: arianeouzareal@gmail.com
-- Live Website: [Your LinkedIn Profile](https://www.linkedin.com/in/yourprofile)
+
 
 Thank you for visiting my portfolio!
