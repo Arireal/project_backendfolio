@@ -1,0 +1,54 @@
+body {
+    background-color: white;
+    color: #333;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #007ACC; /* Blue for tech style */
+    color: white;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    padding: 20px;
+}
+
+section h2 {
+    text-align: center;
+    color: #007ACC;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ccc;
+    text-align: center;
+}
+
+.project-card h3 {
+    margin: 10px 0;
+}
+
+.project-card a {
+    text-decoration: none;
+    color: #007ACC;
+}
+
+.project-card a:hover {
+    text-decoration: underline;
+}
