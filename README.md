@@ -4,7 +4,8 @@ Welcome to my backend portfolio! Here, you will find a collection of my projects
 
 
 
-[LIVE WEBSIRE HERE]([https://arianedev.pythonanywhere.com/])
+[Live Web App HERE](https://arianedev.pythonanywhere.com/)
+
 
 (Deployed in Python Anywhere)
 
