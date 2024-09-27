@@ -1,9 +1,11 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Backend Portfolio</title>
+    {% load static %}
     <style>
         body {
             background-color: white;
@@ -14,49 +16,196 @@
             font-size: 3rem;
             text-align: center;
             margin-top: 50px;
+            color: #0000FF;
         }
         .projects {
             margin: 50px auto;
             width: 80%;
-            max-width: 800px;
+            max-width: 500px;
         }
         .project-item {
-            border: 1px solid #ddd;
+            border: 2px solid #0000FF;
             padding: 20px;
             margin-bottom: 10px;
+            border-radius: 10px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
         }
         .project-title {
             font-size: 1.5rem;
-            color: #007bff;
+            color: #0000FF;
         }
         .project-details {
             margin-top: 10px;
             font-size: 0.9rem;
         }
+        .project-link{
+        color:#0000FF;
+        }
+        .project-link:hover {
+        color: #FF8000;
+        }
+        /* Keyframes for blur-to-focus animation */
+        @keyframes blurToFocus {
+          0% {
+            filter: blur(10px); /* Start with a heavy blur */
+            opacity: 0; /* Start transparent */
+          }
+          100% {
+            filter: blur(0); /* End with no blur */
+            opacity: 1; /* Fully visible */
+          }
+        }
+
+        /* Apply the animation to the text */
+        .blur-focus-text {
+
+          animation: blurToFocus 2s ease-in-out; /* Duration and easing */
+        }
+        .filter-for-logo{
+            filter: brightness(0) invert(1);
+        }
+        header {
+    background-color: white; /* White background for the header */
+}
+
+.navbar {
+    display: flex; /* Use flexbox for distribution */
+    justify-content: flex-start; /* Align items to the left */
+    padding: 10px 0; /* Padding for spacing */
+}
+
+.nav-link {
+    text-decoration: none; /* Remove underline */
+    color: #0000FF; /* Text color */
+    border: 2px solid #0000FF; /* Border color */
+    padding: 10px 20px; /* Padding for button size */
+    border-radius: 5px; /* Rounded corners for buttons */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+    margin-right: 10px; /* Add space between buttons */
+}
+
+        .nav-link:last-child {
+            margin-right: 0; /* Remove margin for the last button */
+        }
+
+        .nav-link:hover {
+            background-color: #f0f0f0;
+        }
+        .about-container {
+            max-width: 800px;
+            margin: auto;
+            text-align: justify;
+        }
+        .about-text {
+        color: #0000FF;
+        text-align: justify;
+        font-size: 16px;
+        line-height: 1.6;
+        padding: 20px;
+}
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px; /* Space between list items */
+        }
+        .highlight {
+            font-weight: bold; /* Bold effect for highlights */
+        }
+        footer {
+        background-color: white; /* White background for the footer */
+        height: 100px; /* Adjust the height to create a gap */
+        width: 100%; /* Ensure it spans the full width of the page */
+        margin-top: 20px; /* Add some space between the content and footer */
+    }
+
+.footer-gap {
+    height: 100%; /* Occupy the full height of the footer */
+}
+/* For WebKit browsers */
+::-webkit-scrollbar {
+    width: 12px; /* Adjust the width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #f0f0f0; /* Background color of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #0000FF; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Rounded corners for the scrollbar */
+    border: 2px solid #ffffff; /* Optional: adds a white border around the scrollbar */
+}
+
+/* For Firefox */
+html {
+    scrollbar-color: #0000FF #f0f0f0; /* Scrollbar thumb and track colors */
+    scrollbar-width: thin; /* Can be "auto" or "thin" */
+}
+
+
+
     </style>
 </head>
 <body>
+<header>
+        <nav class="navbar">
+            <a href="https://ariane-souza.myportfolio.com/frontend" target="_blank" class="nav-link">Frontend Skills</a>
+            <a href="https://www.linkedin.com/in/ariane-souza-dev/" target="_blank" class="nav-link">LinkedIn</a>
+        </nav>
+    </header>
 
-    <div class="title">Backend Portfolio</div>
+    <div class="title blur-focus-text"><p>Ariane Souza</p><p> Backend</p></div>
 
     <div class="projects">
-        <div class="project-item">
-            <div class="project-title">Project 1</div>
-            <div class="project-details">Skills: Python, Django</div>
+        <div class="project-item floating-section2 floating-up2 ">
+            <div class="project-title">Weather API Dashboard</div>
+            <div class="project-details">Python, Streamlit, Plotly</div>
             <div class="project-details">
-                <a href="https://github.com/yourrepo" target="_blank">GitHub</a> |
-                <a href="https://yourlivedemo.com" target="_blank">Live Demo</a>
+                <a class="project-link" href="hhttps://github.com/Arireal/Weather_API_Dashboard" target="_blank">GitHub & Presentation</a> |
+                <a class="project-link" href="https://arianesouza-weather-api.streamlit.app/" target="_blank">Live Demo</a>
             </div>
         </div>
         <div class="project-item">
-            <div class="project-title">Project 2</div>
-            <div class="project-details">Skills: Flask, Docker</div>
+            <div class="project-title">Task App</div>
+            <div class="project-details">Python and Streamlit</div>
             <div class="project-details">
-                <a href="https://github.com/yourrepo2" target="_blank">GitHub</a> |
-                <a href="https://yourlivedemo2.com" target="_blank">Live Demo</a>
+                <a class="project-link" href="https://github.com/Arireal/my-todo-web-app" target="_blank">GitHub & Presentation</a> |
+                <a class="project-link" href="https://arireal-my-todo-web-app-web-app-yuez5x.streamlit.app/" target="_blank">Live Demo</a>
+            </div>
+        </div>
+         <div class="project-item">
+            <div class="project-title">Professional Portfolio</div>
+            <div class="project-details">Python, Django, JS, HTML, CSS</div>
+            <div class="project-details">
+                <a class="project-link" href="https://github.com/Arireal/my-todo-web-app" target="_blank">GitHub & Presentation</a> |
+                <a class="project-link" href="https://arireal-my-todo-web-app-web-app-yuez5x.streamlit.app/" target="_blank">Live Demo</a>
             </div>
         </div>
     </div>
+ <div class="title blur-focus-text"><p>About</p></div>
+<div class="about-container about-text ">
+        <p>Hi there, I'm Ariane! 🌟</p>
+        <p>I work as a Full-Stack Developer and UX/UI Designer with over 5 years of experience in frontend design and 3 years in full-stack development. My journey in tech has been fueled by a dedication to crafting intuitive user experiences and innovative software solutions.</p>
+        <p>While I enjoy creating sleek, user-friendly interfaces, my true passion lies in backend development. I specialize in Python, focusing on building efficient and scalable applications, and I'm particularly interested in software creation and APIs.</p>
+        <p>Here's a glimpse of what I do:</p>
+        <ul>
+            <li><span class="highlight">Python Development:</span> Leveraging Python to write scalable code and develop dynamic applications, with a keen interest in API integration and software solutions.</li>
+            <li><span class="highlight">Full-Stack Development:</span> Creating comprehensive solutions by bridging frontend and backend technologies for seamless user experiences.</li>
+            <li><span class="highlight">Frontend UX/UI Design:</span> Designing responsive and engaging user interfaces that prioritize usability and visual appeal.</li>
+        </ul>
+    </div>
+<footer>
+    <div class="footer-gap"></div>
+</footer>
 
 </body>
 </html>
